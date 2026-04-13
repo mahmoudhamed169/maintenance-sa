@@ -22,12 +22,6 @@ export default function Footer() {
               متخصصون في صيانة وإصلاح جميع الأجهزة المنزلية في منطقة عسير بخبرة
               أكثر من 10 سنوات.
             </p>
-            <a
-              href={`tel:${PHONE}`}
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-colors"
-            >
-              <Phone className="w-4 h-4" /> {PHONE}
-            </a>
           </div>
 
           <div>

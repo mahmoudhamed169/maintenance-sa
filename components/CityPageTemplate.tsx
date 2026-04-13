@@ -5,6 +5,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import { Zap, Trophy, ThumbsUp, Headphones } from "lucide-react";
 
 interface CityPageTemplateProps {
   city: {
@@ -41,6 +42,29 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
     },
   ];
 
+  const whyUs = [
+    {
+      icon: Zap,
+      title: `أسرع استجابة في ${city.name}`,
+      desc: `لدينا فرق متواجدة في مختلف أحياء ${city.name} لضمان أسرع وصول ممكن إليك`,
+    },
+    {
+      icon: Trophy,
+      title: "خبرة محلية متعمقة",
+      desc: `نعرف ${city.name} جيداً ونفهم احتياجات سكانها من خدمات الصيانة`,
+    },
+    {
+      icon: ThumbsUp,
+      title: "ثقة عملاء المدينة",
+      desc: `أكثر من 1000 عميل راضٍ من ${city.name} يثق بنا لصيانة أجهزتهم`,
+    },
+    {
+      icon: Headphones,
+      title: "دعم مستمر",
+      desc: `فريق دعم متخصص لمتابعة عملاء ${city.name} وضمان رضاهم الكامل`,
+    },
+  ];
+
   return (
     <>
       <LocalBusinessSchema city={city.name} lat={city.lat} lng={city.lng} />
@@ -69,7 +93,10 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
 
               <div className="flex flex-wrap gap-3 mb-8 text-sm text-gray-600">
                 {city.neighborhoods.slice(0, 4).map((n) => (
-                  <span key={n} className="bg-gray-100 px-3 py-1.5 rounded-full">
+                  <span
+                    key={n}
+                    className="bg-gray-100 px-3 py-1.5 rounded-full"
+                  >
                     📍 {n}
                   </span>
                 ))}
@@ -100,7 +127,6 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
               </div>
             </div>
 
-            {/* Map */}
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-200 h-80 lg:h-96">
               <iframe
                 src={city.mapEmbed}
@@ -143,34 +169,15 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
                 لماذا نحن الخيار الأول في {city.name}؟
               </h2>
               <div className="space-y-4">
-                {[
-                  {
-                    icon: "🚀",
-                    title: `أسرع استجابة في ${city.name}`,
-                    desc: `لدينا فرق متواجدة في مختلف أحياء ${city.name} لضمان أسرع وصول ممكن إليك`,
-                  },
-                  {
-                    icon: "🏆",
-                    title: "خبرة محلية متعمقة",
-                    desc: `نعرف ${city.name} جيداً ونفهم احتياجات سكانها من خدمات الصيانة`,
-                  },
-                  {
-                    icon: "💯",
-                    title: "ثقة عملاء المدينة",
-                    desc: `أكثر من 1000 عميل راضٍ من ${city.name} يثق بنا لصيانة أجهزتهم`,
-                  },
-                  {
-                    icon: "📞",
-                    title: "دعم مستمر",
-                    desc: `فريق دعم متخصص لمتابعة عملاء ${city.name} وضمان رضاهم الكامل`,
-                  },
-                ].map((f) => (
+                {whyUs.map((f) => (
                   <div key={f.title} className="flex gap-4 items-start">
-                    <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-xl flex-shrink-0">
-                      {f.icon}
+                    <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <f.icon className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">{f.title}</h3>
+                      <h3 className="font-bold text-gray-900 mb-1">
+                        {f.title}
+                      </h3>
                       <p className="text-sm text-gray-600">{f.desc}</p>
                     </div>
                   </div>
@@ -178,7 +185,6 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
               </div>
             </div>
 
-            {/* CTA card */}
             <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-3xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">
                 اطلب فني صيانة في {city.name} الآن
@@ -187,7 +193,10 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
                 لا تدع عطل الجهاز يعطل يومك! اتصل بنا الآن ونرسل لك فنياً
                 محترفاً في {city.name} خلال ساعة واحدة فقط.
               </p>
-              <CTAButtons size="lg" message={`أريد فني صيانة في ${city.name}`} />
+              <CTAButtons
+                size="lg"
+                message={`أريد فني صيانة في ${city.name}`}
+              />
               <div className="mt-6 pt-6 border-t border-white/20">
                 <p className="text-sm text-blue-100">
                   ✓ تقييم مجاني • ✓ ضمان 3 أشهر • ✓ قطع غيار أصلية
