@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -24,11 +23,6 @@ const config: Config = {
           700: "#1d4ed8",
           800: "#1e40af",
           900: "#1e3a8a",
-        },
-        dark: {
-          bg: "#0b0f19",
-          card: "#111827",
-          border: "#1f2937",
         },
       },
       animation: {
@@ -55,4 +49,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

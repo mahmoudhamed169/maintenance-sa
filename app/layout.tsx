@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -44,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl" suppressHydrationWarning>
+    <html lang="ar" dir="rtl">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -58,7 +57,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className="bg-white dark:bg-dark-bg text-gray-900 dark:text-white transition-colors duration-300"
+        className="bg-white text-gray-900"
         style={{
           fontFamily:
             "'IBM Plex Sans Arabic', 'Noto Sans Arabic', Arial, sans-serif",
