@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.techfix-aseer.com"),
+  metadataBase: new URL("https://maintenance-sa.vercel.app/"),
   title: {
     default: "فني صيانة أجهزة منزلية أبها | خميس مشيط | أحد رفيدة",
     template: "%s | تك فيكس للصيانة المنزلية",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ar_SA",
-    url: "https://www.techfix-aseer.com",
+    url: "https://maintenance-sa.vercel.app",
     siteName: "تك فيكس للصيانة المنزلية",
     title: "فني صيانة أجهزة منزلية | أبها - خميس مشيط - أحد رفيدة",
     description:
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://www.techfix-aseer.com" },
+  alternates: { canonical: "https://maintenance-sa.vercel.app" },
 };
 
 export default function RootLayout({
@@ -45,6 +45,11 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
+        {/* ✅ Google Search Console Verification */}
+        <meta
+          name="google-site-verification"
+          content="e5hjWPM3GMxDIgj8uc9c9nZIsDUVVlgCeK67Nc-l1-s"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

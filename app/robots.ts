@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://www.techfix-aseer.com/sitemap.xml",
-    host: "https://www.techfix-aseer.com",
+    sitemap: "https://maintenance-sa.vercel.app/sitemap.xml",
+    host: "https://maintenance-sa.vercel.app",
   };
 }
