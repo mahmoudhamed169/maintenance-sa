@@ -2,12 +2,17 @@ import { MetadataRoute } from "next";
 import { services, cities } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.techfix-aseer.com";
+  const base = "https://maintenance-sa.vercel.app/";
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: base, lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { url: `${base}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    {
+      url: `${base}/services`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
 
   const cityPages: MetadataRoute.Sitemap = cities.map((c) => ({
