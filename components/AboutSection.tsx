@@ -43,45 +43,39 @@ const features: { icon: LucideIcon; title: string; desc: string }[] = [
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-dark-card/30">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">
+            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
               من نحن
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-2 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-6">
               أكثر من 10 سنوات من الخبرة في صيانة الأجهزة المنزلية
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-600 leading-relaxed mb-6">
               تك فيكس للصيانة المنزلية هي الشركة الرائدة في منطقة عسير لخدمات
               صيانة الأجهزة المنزلية. منذ تأسيسنا، قدمنا خدماتنا لأكثر من 5000
               عميل في أبها وخميس مشيط وأحد رفيدة.
             </p>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+            <p className="text-gray-600 leading-relaxed mb-8">
               فريقنا من الفنيين المتخصصين والمعتمدين مدرب على أحدث التقنيات
               والمعدات، ونلتزم بأعلى معايير الجودة في كل عملية صيانة نقوم بها.
             </p>
             <div className="flex items-center gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold gradient-text">+5000</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-                  عميل سعيد
-                </div>
+                <div className="text-sm text-gray-500">عميل سعيد</div>
               </div>
-              <div className="w-px h-12 bg-gray-200 dark:bg-gray-700" />
+              <div className="w-px h-12 bg-gray-200" />
               <div className="text-center">
                 <div className="text-3xl font-bold gradient-text">+10</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-                  سنوات خبرة
-                </div>
+                <div className="text-sm text-gray-500">سنوات خبرة</div>
               </div>
-              <div className="w-px h-12 bg-gray-200 dark:bg-gray-700" />
+              <div className="w-px h-12 bg-gray-200" />
               <div className="text-center">
                 <div className="text-3xl font-bold gradient-text">98%</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-                  رضا العملاء
-                </div>
+                <div className="text-sm text-gray-500">رضا العملاء</div>
               </div>
             </div>
           </div>
@@ -90,15 +84,13 @@ export default function AboutSection() {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="bg-white dark:bg-dark-card rounded-2xl p-5 border border-gray-100 dark:border-dark-border"
+                className="bg-white rounded-2xl p-5 border border-gray-100"
               >
-                <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center mb-3">
-                  <f.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-3">
+                  <f.icon className="w-5 h-5 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-1.5">
-                  {f.title}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                <h3 className="font-bold text-gray-900 mb-1.5">{f.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
                   {f.desc}
                 </p>
               </div>

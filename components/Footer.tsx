@@ -1,16 +1,14 @@
 import Link from "next/link";
-import { Phone, MapPin, Clock, MessageCircle } from "lucide-react";
-import { PHONE, WHATSAPP, BUSINESS_NAME } from "@/lib/data";
-import { services } from "@/lib/data";
+import { Phone, MapPin, Clock } from "lucide-react";
+import { PHONE, WHATSAPP, BUSINESS_NAME, services } from "@/lib/data";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-gray-300">
+    <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg">
@@ -32,7 +30,6 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="font-bold text-white mb-4">خدماتنا</h3>
             <ul className="space-y-2">
@@ -49,7 +46,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Cities */}
           <div>
             <h3 className="font-bold text-white mb-4">مناطق الخدمة</h3>
             <ul className="space-y-2">
@@ -68,7 +64,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
             <h3 className="font-bold text-white mt-6 mb-4">روابط سريعة</h3>
             <ul className="space-y-2">
               {[
@@ -87,7 +82,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="font-bold text-white mb-4">تواصل معنا</h3>
             <div className="space-y-4">

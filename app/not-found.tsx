@@ -5,10 +5,10 @@ export default function NotFound() {
     <div className="min-h-[70vh] flex items-center justify-center px-4">
       <div className="text-center max-w-md">
         <div className="text-8xl font-bold gradient-text mb-4">404</div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        <h1 className="text-2xl font-bold text-gray-900 mb-4">
           الصفحة غير موجودة
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
+        <p className="text-gray-600 mb-8">
           الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
         </p>
         <Link

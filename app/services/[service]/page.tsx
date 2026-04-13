@@ -80,18 +80,17 @@ export default async function ServicePage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="py-16 sm:py-24 bg-gradient-to-b from-blue-50 dark:from-blue-950/20 to-white dark:to-dark-bg">
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            {/* Icon */}
-            <div className="w-20 h-20 bg-blue-100 dark:bg-blue-900/30 rounded-3xl flex items-center justify-center mb-6">
-              <ServiceIcon className="w-10 h-10 text-blue-600 dark:text-blue-400" />
+            <div className="w-20 h-20 bg-blue-100 rounded-3xl flex items-center justify-center mb-6">
+              <ServiceIcon className="w-10 h-10 text-blue-600" />
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               {s.name} في <span className="gradient-text">أبها وخميس مشيط</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               {s.description}
             </p>
             <CTAButtons
@@ -99,8 +98,7 @@ export default async function ServicePage({ params }: Props) {
               message={`السلام عليكم، أريد الاستفسار عن ${s.name}`}
             />
 
-            {/* Trust */}
-            <div className="flex flex-wrap gap-4 mt-8 text-sm text-gray-500 dark:text-gray-400">
+            <div className="flex flex-wrap gap-4 mt-8 text-sm text-gray-500">
               {[
                 "ضمان 3 أشهر",
                 "قطع غيار أصلية",
@@ -117,52 +115,50 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Problems we solve */}
-      <section className="py-16 bg-gray-50 dark:bg-dark-card/30">
+      {/* Problems */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
             الأعطال التي نصلحها
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {s.problems.map((problem) => (
               <div
                 key={problem}
-                className="flex items-center gap-3 bg-white dark:bg-dark-card rounded-2xl p-4 border border-gray-100 dark:border-dark-border"
+                className="flex items-center gap-3 bg-white rounded-2xl p-4 border border-gray-100"
               >
-                <div className="w-10 h-10 bg-red-50 dark:bg-red-900/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center flex-shrink-0">
                   <AlertTriangle className="w-5 h-5 text-red-500" />
                 </div>
-                <span className="font-medium text-gray-800 dark:text-gray-200">
-                  {problem}
-                </span>
+                <span className="font-medium text-gray-800">{problem}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Service in cities */}
+      {/* Cities */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
             {s.name} في منطقة عسير
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {cities.map((city) => (
               <div
                 key={city.slug}
-                className="bg-white dark:bg-dark-card rounded-2xl p-6 border border-gray-100 dark:border-dark-border"
+                className="bg-white rounded-2xl p-6 border border-gray-100"
               >
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {s.name} {city.name}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   نقدم خدمة {s.name} في {city.name} بأعلى مستويات الجودة. فريقنا
                   في {city.name} جاهز للوصول إليك في أسرع وقت ممكن.
                 </p>
                 <a
                   href={`tel:${PHONE}`}
-                  className="text-blue-600 dark:text-blue-400 font-semibold text-sm"
+                  className="text-blue-600 font-semibold text-sm"
                 >
                   اتصل بفني {city.name} ←
                 </a>
@@ -172,7 +168,7 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
-      {/* CTA Mid-page */}
+      {/* CTA */}
       <section className="py-12 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <h2 className="text-2xl font-bold mb-4">

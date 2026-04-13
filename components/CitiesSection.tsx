@@ -9,17 +9,16 @@ export default function CitiesSection() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider">
+          <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
             مناطق الخدمة
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-2 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">
             نخدم منطقة عسير بالكامل
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+          <p className="text-gray-600 max-w-xl mx-auto">
             فرق متخصصة في كل مدينة، جاهزة للوصول إليك في أسرع وقت ممكن
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {cities.map((city, i) => {
             const CityIcon = cityIcons[i];
@@ -31,7 +30,6 @@ export default function CitiesSection() {
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-8 translate-x-8" />
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-6 -translate-x-6" />
-
                 <div className="relative">
                   <div className="flex items-center gap-10 mb-4">
                     <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">

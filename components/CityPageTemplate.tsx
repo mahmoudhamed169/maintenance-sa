@@ -25,9 +25,7 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
   const cityFaqs = [
     {
       q: `هل تخدمون جميع أحياء ${city.name}؟`,
-      a: `نعم، نغطي جميع أحياء ومناطق ${city.name} بالكامل بما فيها: ${city.neighborhoods.join(
-        "، "
-      )} وغيرها من الأحياء.`,
+      a: `نعم، نغطي جميع أحياء ومناطق ${city.name} بالكامل بما فيها: ${city.neighborhoods.join("، ")} وغيرها من الأحياء.`,
     },
     {
       q: `كم يستغرق وصول الفني في ${city.name}؟`,
@@ -52,33 +50,30 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-full px-4 py-1.5 mb-6">
+              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-6">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-blue-700 dark:text-blue-300">
+                <span className="text-sm font-medium text-blue-700">
                   خدمة متاحة في {city.name}
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
                 فني صيانة أجهزة منزلية{" "}
                 <span className="gradient-text">{city.name}</span>
               </h1>
 
-              <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                 خدمات صيانة احترافية لجميع الأجهزة المنزلية في {city.name}،{" "}
                 {city.region}. فنيون معتمدون يصلونك خلال ساعة واحدة.
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-8 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex flex-wrap gap-3 mb-8 text-sm text-gray-600">
                 {city.neighborhoods.slice(0, 4).map((n) => (
-                  <span
-                    key={n}
-                    className="bg-gray-100 dark:bg-dark-card px-3 py-1.5 rounded-full"
-                  >
+                  <span key={n} className="bg-gray-100 px-3 py-1.5 rounded-full">
                     📍 {n}
                   </span>
                 ))}
-                <span className="bg-gray-100 dark:bg-dark-card px-3 py-1.5 rounded-full">
+                <span className="bg-gray-100 px-3 py-1.5 rounded-full">
                   + المزيد
                 </span>
               </div>
@@ -96,7 +91,7 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
                 ].map((s) => (
                   <div
                     key={s.l}
-                    className="text-center bg-white dark:bg-dark-card rounded-2xl p-4 border border-gray-100 dark:border-dark-border"
+                    className="text-center bg-white rounded-2xl p-4 border border-gray-100"
                   >
                     <div className="text-xl font-bold gradient-text">{s.v}</div>
                     <div className="text-xs text-gray-500 mt-1">{s.l}</div>
@@ -106,7 +101,7 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
             </div>
 
             {/* Map */}
-            <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-200 dark:border-dark-border h-80 lg:h-96">
+            <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-200 h-80 lg:h-96">
               <iframe
                 src={city.mapEmbed}
                 width="100%"
@@ -122,15 +117,14 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
         </div>
       </section>
 
-      {/* Services in this city */}
-      <section className="py-16 bg-gray-50 dark:bg-dark-card/30">
+      {/* Services */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">
             خدمات الصيانة في {city.name}
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-10">
-            نقدم جميع خدمات الصيانة المنزلية في {city.name} بأعلى مستويات
-            الجودة
+          <p className="text-gray-600 mb-10">
+            نقدم جميع خدمات الصيانة المنزلية في {city.name} بأعلى مستويات الجودة
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {services.map((service) => (
@@ -140,12 +134,12 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
         </div>
       </section>
 
-      {/* Why us in this city */}
+      {/* Why us */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 لماذا نحن الخيار الأول في {city.name}؟
               </h2>
               <div className="space-y-4">
@@ -172,14 +166,12 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
                   },
                 ].map((f) => (
                   <div key={f.title} className="flex gap-4 items-start">
-                    <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center text-xl flex-shrink-0">
+                    <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-xl flex-shrink-0">
                       {f.icon}
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 dark:text-white mb-1">
-                        {f.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">{f.desc}</p>
+                      <h3 className="font-bold text-gray-900 mb-1">{f.title}</h3>
+                      <p className="text-sm text-gray-600">{f.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -195,10 +187,7 @@ export default function CityPageTemplate({ city }: CityPageTemplateProps) {
                 لا تدع عطل الجهاز يعطل يومك! اتصل بنا الآن ونرسل لك فنياً
                 محترفاً في {city.name} خلال ساعة واحدة فقط.
               </p>
-              <CTAButtons
-                size="lg"
-                message={`أريد فني صيانة في ${city.name}`}
-              />
+              <CTAButtons size="lg" message={`أريد فني صيانة في ${city.name}`} />
               <div className="mt-6 pt-6 border-t border-white/20">
                 <p className="text-sm text-blue-100">
                   ✓ تقييم مجاني • ✓ ضمان 3 أشهر • ✓ قطع غيار أصلية

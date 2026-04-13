@@ -17,18 +17,14 @@ export default function ServiceCard({
   return (
     <Link
       href={`/services/${slug}`}
-      className="group block bg-white dark:bg-dark-card rounded-2xl p-6 border border-gray-100 dark:border-dark-border shadow-sm card-hover"
+      className="group block bg-white rounded-2xl p-6 border border-gray-100 shadow-sm card-hover"
     >
-      <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
-        <Icon className="w-7 h-7 text-blue-600 dark:text-blue-400" />
+      <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+        <Icon className="w-7 h-7 text-blue-600" />
       </div>
-      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-        {name}
-      </h3>
-      <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-        {shortDesc}
-      </p>
-      <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 flex items-center gap-1">
+      <h3 className="text-lg font-bold text-gray-900 mb-2">{name}</h3>
+      <p className="text-sm text-gray-500 leading-relaxed mb-4">{shortDesc}</p>
+      <span className="text-sm font-semibold text-blue-600 flex items-center gap-1">
         تفاصيل الخدمة
         <svg
           className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform"
