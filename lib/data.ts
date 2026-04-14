@@ -12,8 +12,8 @@ import {
   Wrench,
 } from "lucide-react";
 
-export const PHONE = "0500000000";
-export const WHATSAPP = "966500000000";
+export const PHONE = "0542615579";
+export const WHATSAPP = "966542615579";
 export const BUSINESS_NAME = "فني للصيانة المنزلية";
 
 export const services = [
