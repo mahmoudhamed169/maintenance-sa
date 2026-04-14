@@ -37,6 +37,61 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://maintenance-sa.vercel.app" },
 };
 
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "تك فيكس للصيانة المنزلية",
+  telephone: "0542615579",
+  url: "https://maintenance-sa.vercel.app",
+  image: "https://maintenance-sa.vercel.app/og-image.jpg",
+  description:
+    "خدمات صيانة أجهزة منزلية احترافية في أبها، خميس مشيط، وأحد رفيدة",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "أبها",
+    addressRegion: "عسير",
+    addressCountry: "SA",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "18.2164",
+    longitude: "42.5053",
+  },
+  areaServed: [
+    { "@type": "City", name: "أبها" },
+    { "@type": "City", name: "خميس مشيط" },
+    { "@type": "City", name: "أحد رفيدة" },
+  ],
+  openingHours: "Sa-Th 08:00-22:00",
+  priceRange: "$$",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "خدمات الصيانة",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "صيانة مكيفات" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "صيانة غسالات" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "صيانة ثلاجات" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "صيانة بوتاجازات" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "صيانة سخانات" },
+      },
+    ],
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -45,7 +100,6 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
-        {/* ✅ Google Search Console Verification */}
         <meta
           name="google-site-verification"
           content="e5hjWPM3GMxDIgj8uc9c9nZIsDUVVlgCeK67Nc-l1-s"
@@ -59,6 +113,10 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
       <body
